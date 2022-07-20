@@ -10,7 +10,7 @@ function Article() {
                 <img src={blueArrow} alt="blue arrow" />
                 Как это работает
             </h1>
-            <div class="article-content">
+            <div class="article-content-first">
                 <p>При вычислении индекса использованы нелинейные уравнения и коэффициент лучше описывает упругие стенки
                     сосуда при большой разнице систолического и диастолического давления. Индекс жесткости не привязан к
                     конкретному устройству и может быть применен для коррекции влияния высокого артериального давления
@@ -30,7 +30,7 @@ function Article() {
                 <img src={blueArrow} alt="blue arrow" />
                 Пример расчета и сравнения haStart
             </h1>
-            <div class="article-content">
+            <div class="article-content-second">
                 <p>
                     Мы Рассчитали haPWV по исходным данным исследований на Vasera VS1500n для более 900 случайных
                     пациентов,

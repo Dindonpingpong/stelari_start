@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import whiteArrow from "../img/white_arrow.svg";
+
 
 function Calculator() {
+    const [hasResult, setResult] = useState(false)
+
+    const solve = () => {
+        setResult(current => !current)
+    }
+
     return (
         <div class="item calculator" id="calculator">
             <div class="calculator-description">
@@ -45,11 +53,18 @@ function Calculator() {
                         <option value="AO">AO</option>
                     </select>
                 </div>
-                <button>Рассчитать</button>
+                <button onClick={solve}>Рассчитать</button>
             </div>
-            <div>
+            <div class="score" 
+                style={{
+                    visibility: hasResult ? '' : 'hidden'
+                }}
+            >
                 <h2>Ваш результат:</h2>
-                <p>12314</p>
+                <div class="score-result">
+                    <img src={whiteArrow} alt="blue arrow" />
+                    12314
+                </div>
             </div>
             <div class="label">
                 <h2>Метод N2</h2>
@@ -69,11 +84,11 @@ function Calculator() {
                         </div>
                     </div>
                     <div class="accept">
-                        <p>Отправляя данные Вы соглашаетесь с тем, что полученные результаты не могут быть использованы
+                        <input type="checkbox" />
+                        Отправляя данные Вы соглашаетесь с тем, что полученные результаты не могут быть использованы
                             для
                             постановки диагноза и носят характер предварительного исследования.
-                        </p>
-                        <input type="checkbox" />
+                        
                     </div>
                 </div>
                 <div class="calculator-file-load-bot">
