@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/stelari_start/static/css/main.9d937928.css",
+    "main.js": "/stelari_start/static/js/main.63238bd4.js",
+    "static/js/787.effaf0b9.chunk.js": "/stelari_start/static/js/787.effaf0b9.chunk.js",
+    "static/media/pic_2.jpg": "/stelari_start/static/media/pic_2.37d2e85c25614f8f49cf.jpg",
+    "static/media/pic_1.jpg": "/stelari_start/static/media/pic_1.4987c4b6d0ad4d116450.jpg",
+    "static/media/log.png": "/stelari_start/static/media/log.28065764b412462664b7.png",
+    "static/media/logo.svg": "/stelari_start/static/media/logo.a1173dee5a855242c0136838f4b753eb.svg",
+    "index.html": "/stelari_start/index.html",
+    "static/media/blue_arrow.svg": "/stelari_start/static/media/blue_arrow.f306524d6ca9bb868e00123fcf0b6706.svg",
+    "static/media/white_arrow.svg": "/stelari_start/static/media/white_arrow.c4d253c99a8c9e58b02f0c2a6ba02def.svg",
+    "main.9d937928.css.map": "/stelari_start/static/css/main.9d937928.css.map",
+    "main.63238bd4.js.map": "/stelari_start/static/js/main.63238bd4.js.map",
+    "787.effaf0b9.chunk.js.map": "/stelari_start/static/js/787.effaf0b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d937928.css",
+    "static/js/main.63238bd4.js"
+  ]
+}
