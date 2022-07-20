@@ -39,14 +39,10 @@ p {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* TODO: check in all browser gap may not work use
-    commented margin above instead
-  */
   gap: 12px;
 }
 
 .header-nav-list>a {
-  /* margin: 10px; */
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -216,7 +212,6 @@ select {
   background-size: 10px;
 }
 
-/* To remove the arrow of select element in IE */
 select::-ms-expand {
   display: none;
 }
@@ -250,8 +245,6 @@ button:active {
   box-shadow: 0 5px #FFFFFF;
   transform: translateY(4px);
 }
-
-/* Drag and drop */
 
 #drop-area {
   border: 2px dashed #ccc;
@@ -363,7 +356,6 @@ button:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap; */
   margin-bottom: 50px;
 }
 
@@ -371,14 +363,10 @@ button:active {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* TODO: check in all browser gap may not work use
-    commented margin above instead
-  */
   gap: 12px;
 }
 
 .footer-nav-list>a {
-  /* margin: 10px; */
   color: #FFFFFF;
   text-decoration: none;
 }
