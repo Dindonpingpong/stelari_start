@@ -30,19 +30,19 @@ function Calculator() {
                 Введите данные в поля:
             </p>
             <div class="calculator-main">
-                <div>
+                <div class="calculator-main-text-item">
                     <h3>Ps</h3>
                     <input type="text" />
                 </div>
-                <div>
+                <div class="calculator-main-text-item">
                     <h3>Pd</h3>
                     <input type="text" />
                 </div>
-                <div>
+                <div class="calculator-main-text-item">
                     <h3>PWV</h3>
                     <input type="text" />
                 </div>
-                <div>
+                <div class="calculator-main-text-dropdown">
                     <h3>Тип PWV</h3>
                     <select id="type-pwv" name="type-pwv">
                         <option value="select" hidden selected>Выберите</option>
@@ -75,7 +75,7 @@ function Calculator() {
                     <div class="drop-file">
                         <p>Прикрепите свой файл данных в формате .xls или .csv*</p>
                         <div id="drop-area">
-                            <form class="my-form">
+                            <form class="calculator-form">
                                 <p>Перетащите файл</p>
                                 <p>или</p>
                                 <input type="file" id="fileElem" multiple accept="*/*" />

@@ -47,12 +47,12 @@ function Article() {
                 <div class="image-list">
                     <img src={firstPicture} alt="first" />
                     <div class="picture-label">
-                        <div class="line blue"></div>
+                        <div class="picture-label-line"></div>
                         <h3>рис. 1</h3>
                     </div>
                     <img src={secondPicture} alt="second" />
                     <div class="picture-label">
-                        <div class="line blue"></div>
+                        <div class="picture-label-line"></div>
                         <h3>рис. 2</h3>
                     </div>
                 </div>
