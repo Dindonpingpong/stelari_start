@@ -1,9 +1,16 @@
 import React from "react";
+import ModalImage from "react-modal-image";
+import { useMediaQuery } from 'react-responsive';
+
 import blueArrow from "../img/blue_arrow.svg";
 import firstPicture from "../img/pic_1.jpg";
 import secondPicture from "../img/pic_2.jpg";
 
 function Article() {
+
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+
     return (
         <div class="item article" id="article">
             <h1 class="article-head">
@@ -45,12 +52,36 @@ function Article() {
                     артериального давления на скорость пульсовой волны.
                 </p>
                 <div class="image-list">
-                    <img src={firstPicture} alt="first" />
+                    {
+                        isDesktopOrLaptop &&
+                        <ModalImage
+                            className="image-list-picture"
+                            small={firstPicture}
+                            large={firstPicture}
+                            alt="second"
+                        />
+                    }
+                    {
+                        isTabletOrMobile &&
+                        <img class="image-list-picture" src={firstPicture} alt="first" />
+                    }
                     <div class="picture-label">
                         <div class="picture-label-line"></div>
                         <h3>рис. 1</h3>
                     </div>
-                    <img src={secondPicture} alt="second" />
+                    {
+                        isDesktopOrLaptop &&
+                        <ModalImage
+                            className="image-list-picture"
+                            small={secondPicture}А
+                            large={secondPicture}
+                            alt="second"
+                        />
+                    }
+                    {
+                        isTabletOrMobile &&
+                        <img class="image-list-picture" src={secondPicture} alt="second" />
+                    }
                     <div class="picture-label">
                         <div class="picture-label-line"></div>
                         <h3>рис. 2</h3>

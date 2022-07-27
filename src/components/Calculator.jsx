@@ -10,7 +10,7 @@ function Calculator() {
     }
 
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
     return (
         <div class="item calculator" id="calculator">

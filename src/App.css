@@ -181,7 +181,7 @@ p {
   flex-direction: column;
 }
 
-.image-list>img {
+.image-list-picture {
   width: 360px;
 }
 
@@ -467,7 +467,7 @@ button:active {
   color: rgba(255, 255, 255, 0.8);
 }
 
-@media only screen and (max-width: 1224px) {
+@media only screen and (max-width: 1024px) {
   .item {
     padding: 30px 24px 30px 24px;
   }
@@ -570,7 +570,7 @@ button:active {
     margin-right: 0;
   }
 
-  .image-list>img {
+  .image-list-picture {
     width: 330px;
   }
 
