@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import whiteArrow from "../img/white_arrow.svg";
-
+import { useMediaQuery } from 'react-responsive';
 
 function Calculator() {
     const [hasResult, setResult] = useState(false)
@@ -8,6 +8,9 @@ function Calculator() {
     const solve = () => {
         setResult(current => !current)
     }
+
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
     return (
         <div class="item calculator" id="calculator">
@@ -53,48 +56,91 @@ function Calculator() {
                         <option value="AO">AO</option>
                     </select>
                 </div>
+                {
+                    isTabletOrMobile &&
+                    <div class="score"
+                        style={{
+                            visibility: hasResult ? '' : 'hidden'
+                        }}
+                    >
+                        <h2>Ваш результат:</h2>
+                        <div class="score-result">
+                            <img src={whiteArrow} alt="blue arrow" />
+                            12314
+                        </div>
+                    </div>
+                }
                 <button onClick={solve}>Рассчитать</button>
             </div>
-            <div class="score" 
-                style={{
-                    visibility: hasResult ? '' : 'hidden'
-                }}
-            >
-                <h2>Ваш результат:</h2>
-                <div class="score-result">
-                    <img src={whiteArrow} alt="blue arrow" />
-                    12314
+            {
+                isDesktopOrLaptop &&
+                <div class="score"
+                    style={{
+                        visibility: hasResult ? '' : 'hidden'
+                    }}
+                >
+                    <h2>Ваш результат:</h2>
+                    <div class="score-result">
+                        <img src={whiteArrow} alt="blue arrow" />
+                        12314
+                    </div>
                 </div>
-            </div>
+            }
             <div class="label">
                 <h2>Метод N2</h2>
                 <div class="line white"></div>
             </div>
             <div>
                 <div class="calculator-file-load">
-                    <div class="drop-file">
-                        <p>Прикрепите свой файл данных в формате .xls или .csv*</p>
-                        <div id="drop-area">
-                            <form class="calculator-form">
-                                <p>Перетащите файл</p>
-                                <p>или</p>
-                                <input type="file" id="fileElem" multiple accept="*/*" />
-                                <label class="button" for="fileElem">Загрузите</label>
-                            </form>
+                    {
+                        isDesktopOrLaptop &&
+                        <div class="drop-file">
+                            <p>Прикрепите свой файл данных в формате .xls или .csv*</p>
+                            <div id="drop-area">
+                                <form class="calculator-form">
+                                    <p>Перетащите файл</p>
+                                    <p>или</p>
+                                    <input type="file" id="fileElem" multiple accept="*/*" />
+                                    <label class="button" for="fileElem">Загрузите</label>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                    }
+                    {
+                        isTabletOrMobile &&
+                        <p>Прикрепите свой файл данных в формате .xls или .csv*</p>
+                    }
+                    {
+                        isTabletOrMobile &&
+                        <form class="calculator-form">
+                            <input type="file" id="fileElem" multiple accept="*/*" />
+                            <label class="button" for="fileElem">Загрузите</label>
+                        </form>
+                    }
+                    {
+                        isTabletOrMobile &&
+                        <div class="calculator-file-load-bot">
+                            <p>* Пример файла (нажмите, чтобы увидеть целиком)</p>
+                        </div>
+                    }
                     <div class="accept">
                         <input type="checkbox" />
                         Отправляя данные Вы соглашаетесь с тем, что полученные результаты не могут быть использованы
-                            для
-                            постановки диагноза и носят характер предварительного исследования.
-                        
+                        для
+                        постановки диагноза и носят характер предварительного исследования.
                     </div>
+                    {
+                        isTabletOrMobile &&
+                        <button class="result-button">Рассчитать и скачать результат</button>
+                    }
                 </div>
-                <div class="calculator-file-load-bot">
-                    <p>* Пример файла (нажмите, чтобы увидеть целиком)</p>
-                    <button>Рассчитать и скачать результат</button>
-                </div>
+                {
+                    isDesktopOrLaptop &&
+                    <div class="calculator-file-load-bot">
+                        <p>* Пример файла (нажмите, чтобы увидеть целиком)</p>
+                        <button>Рассчитать и скачать результат</button>
+                    </div>
+                }
             </div>
         </div>
     )
