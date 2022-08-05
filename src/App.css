@@ -4,6 +4,11 @@ html {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope'), url(./fonts/Manrope/Manrope-Regular.ttf) format('truetype');
+}
+
 h1,
 a,
 p {
@@ -299,7 +304,7 @@ button:active {
   border-radius: 9px;
   height: 40px;
   width: 420px;
-  padding: 50px 70px 50px 70px;
+  padding: 50px 70px 70px 70px;
   margin-top: 32px;
 }
 
@@ -307,6 +312,13 @@ button:active {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.calculator-form>p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
 }
 
 .calculator-form>label {
@@ -351,15 +363,23 @@ button:active {
   line-height: 150%;
 }
 
+.calculator>p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
 .calculator-description {
   margin-bottom: 150px;
 }
 
 .calculator-description>h1 {
   max-width: 750px;
+  font-weight: 700;
   font-size: 40px;
-  letter-spacing: 0.03em;
   line-height: 120%;
+  letter-spacing: 0.03em;
 }
 
 .calculator-description>p {
@@ -383,6 +403,10 @@ button:active {
 }
 
 .accept {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
   display: flex;
   flex-direction: row;
   flex-basis: 35%;
@@ -398,6 +422,13 @@ button:active {
 
 .drop-file {
   flex-basis: 55%;
+}
+
+.drop-file>p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
 }
 
 .white {
@@ -464,6 +495,10 @@ button:active {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.policy>a {
   color: rgba(255, 255, 255, 0.8);
 }
 

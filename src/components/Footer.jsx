@@ -15,7 +15,11 @@ function Footer() {
                     <Link to="#contacts">контакты</Link>
                 </div>
             </div>
-            <p class="white policy">Privacy policy. Cookie policy. © 2022. All Rights Reserved.</p>
+            <p class="white policy">
+                Privacy policy. Cookie policy. © 2022. All Rights Reserved.
+                <br/>Designed by <a href="https://margaritte.com">Margarita</a> 
+                <br/>Developed by <a href="https://github.com/Dindonpingpong">Rkina</a> 
+            </p>
         </div>
     )
 }
