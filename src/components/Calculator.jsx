@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import whiteArrow from "../img/white_arrow.svg";
 import { useMediaQuery } from 'react-responsive';
 
+import templateExcel from "./../files_examples/Template.xlsx";
+
 function Calculator() {
     const [hasResult, setResult] = useState(false)
 
@@ -13,8 +15,8 @@ function Calculator() {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
     return (
-        <div class="item calculator" id="calculator">
-            <div class="calculator-description">
+        <div className="item calculator" id="calculator">
+            <div className="calculator-description">
                 <h1>
                     Рассчитайте индекс артериальной жесткости Stelari / Start
                 </h1>
@@ -25,48 +27,51 @@ function Calculator() {
                     массив данных воспользуйтесь <b>методом N2</b>.
                 </p>
             </div>
-            <div class="label">
+            <div className="label">
                 <h2>Метод N1</h2>
-                <div class="line white"></div>
+                <div className="line white"></div>
             </div>
             <p>
                 Введите данные в поля:
             </p>
-            <div class="calculator-main">
-                <div class="calculator-main-text-item">
+            <div className="calculator-main">
+                <div className="calculator-main-text-item">
                     <h3>Ps</h3>
                     <input type="text" />
                 </div>
-                <div class="calculator-main-text-item">
+                <div className="calculator-main-text-item">
                     <h3>Pd</h3>
                     <input type="text" />
                 </div>
-                <div class="calculator-main-text-item">
+                <div className="calculator-main-text-item">
                     <h3>PWV</h3>
                     <input type="text" />
                 </div>
-                <div class="calculator-main-text-dropdown">
+                <div className="calculator-main-text-dropdown">
                     <h3>Тип PWV</h3>
-                    <select id="type-pwv" name="type-pwv">
-                        <option value="select" hidden selected>Выберите</option>
-                        <option value="CF">CF</option>
-                        <option value="BD">BA</option>
-                        <option value="HA">HA</option>
-                        <option value="EST">EST</option>
-                        <option value="AO">AO</option>
+                    <select id="type-pwv" name="type-pwv" defaultValue="Выберите">
+                        <optgroup>
+                            <option value="select" hidden>Выберите</option>
+                            <option value="CF">CF</option>
+                            <option value="BD">BA</option>
+                            <option value="HA">HA</option>
+                            <option value="EST">EST</option>
+                            <option value="AO">AO</option>
+                        </optgroup>
                     </select>
                 </div>
                 {
                     isTabletOrMobile &&
-                    <div class="score"
-                        style={{
-                            visibility: hasResult ? '' : 'hidden'
-                        }}
+                    <div className="score"
                     >
                         <h2>Ваш результат:</h2>
-                        <div class="score-result">
+                        <div className="score-result">
                             <img src={whiteArrow} alt="blue arrow" />
-                            12314
+                            <p
+                                style={{
+                                    visibility: hasResult ? '' : 'hidden'
+                                }}
+                            >123,14</p>
                         </div>
                     </div>
                 }
@@ -74,34 +79,35 @@ function Calculator() {
             </div>
             {
                 isDesktopOrLaptop &&
-                <div class="score"
-                    style={{
-                        visibility: hasResult ? '' : 'hidden'
-                    }}
+                <div className="score"
                 >
                     <h2>Ваш результат:</h2>
-                    <div class="score-result">
+                    <div className="score-result">
                         <img src={whiteArrow} alt="blue arrow" />
-                        12314
+                        <p
+                            style={{
+                                visibility: hasResult ? '' : 'hidden'
+                            }}
+                        >123,14</p>
                     </div>
                 </div>
             }
-            <div class="label">
+            <div className="label">
                 <h2>Метод N2</h2>
-                <div class="line white"></div>
+                <div className="line white"></div>
             </div>
             <div>
-                <div class="calculator-file-load">
+                <div className="calculator-file-load">
                     {
                         isDesktopOrLaptop &&
-                        <div class="drop-file">
+                        <div className="drop-file">
                             <p>Прикрепите свой файл данных в формате .xls или .csv*</p>
                             <div id="drop-area">
-                                <form class="calculator-form">
+                                <form className="calculator-form">
                                     <p>Перетащите файл</p>
                                     <p>или</p>
                                     <input type="file" id="fileElem" multiple accept="*/*" />
-                                    <label class="button" for="fileElem">Загрузите</label>
+                                    <label className="button" htmlFor="fileElem">Загрузите</label>
                                 </form>
                             </div>
                         </div>
@@ -112,32 +118,46 @@ function Calculator() {
                     }
                     {
                         isTabletOrMobile &&
-                        <form class="calculator-form">
+                        <form className="calculator-form">
                             <input type="file" id="fileElem" multiple accept="*/*" />
-                            <label class="button" for="fileElem">Загрузите</label>
+                            <label className="button" htmlFor="fileElem">Загрузите</label>
                         </form>
                     }
                     {
                         isTabletOrMobile &&
-                        <div class="calculator-file-load-bot">
+                        <div className="calculator-file-load-bot">
                             <p>* Пример файла (нажмите, чтобы увидеть целиком)</p>
                         </div>
                     }
-                    <div class="accept">
-                        <input type="checkbox" />
-                        Отправляя данные Вы соглашаетесь с тем, что полученные результаты не могут быть использованы
-                        для
-                        постановки диагноза и носят характер предварительного исследования.
+                    <div className="side-item">
+                        <div className="calculator-main-text-dropdown">
+                            <h3>Выберите тип PWV</h3>
+                            <select id="type-pwv" name="type-pwv" defaultValue="CF">
+                                <optgroup>
+                                    <option value="CF">CF</option>
+                                    <option value="BD">BA</option>
+                                    <option value="HA">HA</option>
+                                    <option value="EST">EST</option>
+                                    <option value="AO">AO</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div className="accept">
+                            <input type="checkbox" />
+                            Отправляя данные Вы соглашаетесь с тем, что полученные результаты не могут быть использованы
+                            для
+                            постановки диагноза и носят характер предварительного исследования.
+                        </div>
                     </div>
                     {
                         isTabletOrMobile &&
-                        <button class="result-button">Рассчитать и скачать результат</button>
+                        <button className="result-button">Рассчитать и скачать результат</button>
                     }
                 </div>
                 {
                     isDesktopOrLaptop &&
-                    <div class="calculator-file-load-bot">
-                        <p>* Пример файла (нажмите, чтобы увидеть целиком)</p>
+                    <div className="calculator-file-load-bot">
+                        <a href={templateExcel}>* Пример файла (нажмите, чтобы скачать шаблон)</a>
                         <button>Рассчитать и скачать результат</button>
                     </div>
                 }

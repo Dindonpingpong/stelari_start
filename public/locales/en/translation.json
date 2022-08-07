@@ -1,0 +1,17 @@
+{
+    "header": {
+        "headerContent": "Stelari /Start is index of arterial stiffness based on the theory of reversible ruptures during fluid movement in an extended space bounded by elastic walls, as well as the fundamental laws of conservation of momentum and mass."
+    },
+    "article": {
+        "firstArticle": "When calculating the index nonlinear equations were used and the coefficient describes the elastic walls of the vessel better with a large difference in systolic and diastolic pressure. The stiffness index is not tied to a specific device and can be used to correct the effect of high blood pressure on the pulse wave velocity obtained on any devices on any part of the arterial bed. In this case, the StArt index is considered as an intermediate one and is calculated for a specific section of the arterial bed. Its name reflects the conditional letter designation of this section of the bed."
+    },
+    "howItWorks": "How it works",
+    "exampleHeader": "Example of calculation and comparison haStart",
+    "calculatorHeader": "Calculate the arterial stiffness index",
+    "calcRequirements": "To calculate, you will need a minimum of data: Ps, Pd, PWV.",
+    "options": "If you want to process data from a single study, use the N1 method. If you have a large data set, use the N2 method.",
+    "secondArticle": "For example, baStart, haStart, estStart and so on. There is already an index for elastic arteries. This is the Stelari index of stiffness based on pulse wave velocity of the &quot;gold standard&quot; cfPWV.",
+    "thirdArticle": "We have calculated haPWV according to Vasera VS1500n studies for 1000 random patients, and we have taken into account BP data at the time of measurement. We have received haStart and have compared it with CAVI, calculated on the same data in the same patients. We have seen fairly high     correlation of the ha indices Start and CAVI, which are taking into account     completely different approaches to their calculation methods. It allows us to     conclude that they are mutually confirmed as methods of eliminating the influence of blood pressure on the pulse wave velocity.",
+    "acceptText": "By submitting the data you agree that the obtained results cannot be used for diagnosis and are of the nature of a preliminary study.",
+    "policy": "All materials on this site are copyrighted. It is prohibited to copy and distribute information without the prior consent of the copyright holder. The results of the index calculations can be used by researchers at their discretion"
+}
